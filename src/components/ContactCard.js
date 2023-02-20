@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const ContactCard = (props) =>{
     const {id, name, email} = props.contact;
     return(
@@ -8,6 +9,7 @@ const ContactCard = (props) =>{
             <div className="header">{name}</div>
             <div>{email}</div>
         </div>
+        <button className="click-delete" onClick={() => props.clickHandler(id)}>delete</button>
     </div>
     );
 };
